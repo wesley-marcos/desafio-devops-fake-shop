@@ -1,0 +1,15 @@
+name: CI_CD
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Obter código"
+  CD:
+    needs: [CI]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Obter código"
