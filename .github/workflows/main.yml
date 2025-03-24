@@ -20,7 +20,7 @@ jobs:
           context: ./src
           push: true
           file: ./src/Dockerfile
-          tags: wesleymarcos/desafio-devops-fake-shop:v1
+          tags: wesleymarcos/desafio-devops-fake-shop:v${{ github.run_number }}
   CD:
     needs: [CI]
     runs-on: ubuntu-latest
